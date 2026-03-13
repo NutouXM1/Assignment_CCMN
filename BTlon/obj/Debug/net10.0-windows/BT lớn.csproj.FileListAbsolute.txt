@@ -1,0 +1,17 @@
+C:\Users\Admins\Documents\C#\BT lớn\bin\Debug\net10.0-windows\BT lớn.exe
+C:\Users\Admins\Documents\C#\BT lớn\bin\Debug\net10.0-windows\BT lớn.deps.json
+C:\Users\Admins\Documents\C#\BT lớn\bin\Debug\net10.0-windows\BT lớn.runtimeconfig.json
+C:\Users\Admins\Documents\C#\BT lớn\bin\Debug\net10.0-windows\BT lớn.dll
+C:\Users\Admins\Documents\C#\BT lớn\bin\Debug\net10.0-windows\BT lớn.pdb
+C:\Users\Admins\Documents\C#\BT lớn\obj\Debug\net10.0-windows\BT_lớn.Form1.resources
+C:\Users\Admins\Documents\C#\BT lớn\obj\Debug\net10.0-windows\BT lớn.csproj.GenerateResource.cache
+C:\Users\Admins\Documents\C#\BT lớn\obj\Debug\net10.0-windows\BT lớn.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admins\Documents\C#\BT lớn\obj\Debug\net10.0-windows\BT lớn.AssemblyInfoInputs.cache
+C:\Users\Admins\Documents\C#\BT lớn\obj\Debug\net10.0-windows\BT lớn.AssemblyInfo.cs
+C:\Users\Admins\Documents\C#\BT lớn\obj\Debug\net10.0-windows\BT lớn.csproj.CoreCompileInputs.cache
+C:\Users\Admins\Documents\C#\BT lớn\obj\Debug\net10.0-windows\BT lớn.dll
+C:\Users\Admins\Documents\C#\BT lớn\obj\Debug\net10.0-windows\refint\BT lớn.dll
+C:\Users\Admins\Documents\C#\BT lớn\obj\Debug\net10.0-windows\BT lớn.pdb
+C:\Users\Admins\Documents\C#\BT lớn\obj\Debug\net10.0-windows\BT lớn.genruntimeconfig.cache
+C:\Users\Admins\Documents\C#\BT lớn\obj\Debug\net10.0-windows\ref\BT lớn.dll
+C:\Users\Admins\Documents\C#\BT lớn\obj\Debug\net10.0-windows\BT_lớn.Properties.Resources.resources
