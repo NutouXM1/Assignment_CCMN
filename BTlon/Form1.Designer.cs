@@ -31,7 +31,6 @@
             components = new System.ComponentModel.Container();
             contextMenuStrip1 = new ContextMenuStrip(components);
             tabControl1 = new TabControl();
-            tabPage1 = new TabPage();
             tabPage2 = new TabPage();
             tableLayoutPanel1 = new TableLayoutPanel();
             label1 = new Label();
@@ -65,13 +64,11 @@
             textBox8 = new TextBox();
             comboBox3 = new ComboBox();
             button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            button7 = new Button();
             label14 = new Label();
             textBox7 = new TextBox();
             comboBox2 = new ComboBox();
-            button9 = new Button();
+            button7 = new Button();
+            button5 = new Button();
             dataGridView2 = new DataGridView();
             tabPage4 = new TabPage();
             tableLayoutPanel3 = new TableLayoutPanel();
@@ -83,7 +80,6 @@
             button10 = new Button();
             button11 = new Button();
             button12 = new Button();
-            button13 = new Button();
             dataGridView3 = new DataGridView();
             tabPage5 = new TabPage();
             tableLayoutPanel4 = new TableLayoutPanel();
@@ -95,9 +91,7 @@
             radioButton6 = new RadioButton();
             button16 = new Button();
             button14 = new Button();
-            button15 = new Button();
             label27 = new Label();
-            comboBox5 = new ComboBox();
             label23 = new Label();
             label28 = new Label();
             textBox12 = new TextBox();
@@ -107,6 +101,7 @@
             label29 = new Label();
             comboBox8 = new ComboBox();
             textBox6 = new TextBox();
+            textBox9 = new TextBox();
             tabControl1.SuspendLayout();
             tabPage2.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
@@ -129,7 +124,6 @@
             // 
             // tabControl1
             // 
-            tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage3);
             tabControl1.Controls.Add(tabPage4);
@@ -141,27 +135,17 @@
             tabControl1.SelectedIndex = 0;
             tabControl1.Size = new Size(1141, 471);
             tabControl1.TabIndex = 1;
-            // 
-            // tabPage1
-            // 
-            tabPage1.Location = new Point(4, 34);
-            tabPage1.Margin = new Padding(4, 5, 4, 5);
-            tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(4, 5, 4, 5);
-            tabPage1.Size = new Size(1133, 433);
-            tabPage1.TabIndex = 0;
-            tabPage1.Text = "Trang chủ";
-            tabPage1.UseVisualStyleBackColor = true;
+            tabControl1.SelectedIndexChanged += tabControl1_SelectedIndexChanged;
             // 
             // tabPage2
             // 
             tabPage2.Controls.Add(tableLayoutPanel1);
             tabPage2.Controls.Add(dataGridView1);
-            tabPage2.Location = new Point(4, 29);
+            tabPage2.Location = new Point(4, 34);
             tabPage2.Margin = new Padding(4, 5, 4, 5);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(4, 5, 4, 5);
-            tabPage2.Size = new Size(1133, 438);
+            tabPage2.Size = new Size(1133, 433);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Người thuê";
             tabPage2.UseVisualStyleBackColor = true;
@@ -199,7 +183,7 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20.3571434F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 24.2857151F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 30.3571434F));
-            tableLayoutPanel1.Size = new Size(1125, 193);
+            tableLayoutPanel1.Size = new Size(1125, 188);
             tableLayoutPanel1.TabIndex = 1;
             // 
             // label1
@@ -227,7 +211,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(659, 48);
+            label6.Location = new Point(659, 47);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
             label6.Size = new Size(190, 25);
@@ -237,7 +221,7 @@
             // button1
             // 
             button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button1.Location = new Point(533, 137);
+            button1.Location = new Point(533, 134);
             button1.Margin = new Padding(4);
             button1.Name = "button1";
             button1.Size = new Size(118, 36);
@@ -249,7 +233,7 @@
             // button2
             // 
             button2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button2.Location = new Point(775, 137);
+            button2.Location = new Point(775, 134);
             button2.Margin = new Padding(4);
             button2.Name = "button2";
             button2.Size = new Size(118, 36);
@@ -261,7 +245,7 @@
             // button3
             // 
             button3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button3.Location = new Point(1003, 137);
+            button3.Location = new Point(1003, 134);
             button3.Margin = new Padding(4);
             button3.Name = "button3";
             button3.Size = new Size(118, 36);
@@ -293,7 +277,7 @@
             comboBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Xe máy", "Xe đạp", "Xe điện", "Không có" });
-            comboBox1.Location = new Point(901, 52);
+            comboBox1.Location = new Point(901, 51);
             comboBox1.Margin = new Padding(4);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(220, 33);
@@ -303,7 +287,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(4, 48);
+            label3.Location = new Point(4, 47);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(78, 25);
@@ -315,7 +299,7 @@
             // 
             radioButton1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(147, 52);
+            radioButton1.Location = new Point(147, 51);
             radioButton1.Margin = new Padding(4);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(259, 29);
@@ -328,7 +312,7 @@
             // textBox2
             // 
             textBox2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox2.Location = new Point(147, 91);
+            textBox2.Location = new Point(147, 89);
             textBox2.Margin = new Padding(4);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(259, 31);
@@ -338,7 +322,7 @@
             // 
             radioButton2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(414, 52);
+            radioButton2.Location = new Point(414, 51);
             radioButton2.Margin = new Padding(4);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(237, 29);
@@ -350,7 +334,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(4, 87);
+            label2.Location = new Point(4, 85);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(117, 25);
@@ -360,7 +344,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(4, 133);
+            label4.Location = new Point(4, 130);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
             label4.Size = new Size(84, 25);
@@ -370,7 +354,7 @@
             // textBox4
             // 
             textBox4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox4.Location = new Point(147, 137);
+            textBox4.Location = new Point(147, 134);
             textBox4.Margin = new Padding(4);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(259, 31);
@@ -381,23 +365,28 @@
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Dock = DockStyle.Bottom;
-            dataGridView1.Location = new Point(4, 198);
+            dataGridView1.Location = new Point(4, 193);
             dataGridView1.Margin = new Padding(4);
+            dataGridView1.MultiSelect = false;
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(1125, 235);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dataGridView1.CellEnter += dataGridView1_CellEnter;
+            dataGridView1.CellMouseDoubleClick += dataGridView1_CellMouseDoubleClick;
             // 
             // tabPage3
             // 
             tabPage3.Controls.Add(tableLayoutPanel2);
             tabPage3.Controls.Add(dataGridView2);
-            tabPage3.Location = new Point(4, 34);
+            tabPage3.Location = new Point(4, 29);
             tabPage3.Margin = new Padding(4, 5, 4, 5);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(4, 5, 4, 5);
-            tabPage3.Size = new Size(1133, 433);
+            tabPage3.Size = new Size(1133, 438);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Hợp đồng thuê";
             tabPage3.UseVisualStyleBackColor = true;
@@ -421,13 +410,11 @@
             tableLayoutPanel2.Controls.Add(textBox8, 3, 2);
             tableLayoutPanel2.Controls.Add(comboBox3, 1, 2);
             tableLayoutPanel2.Controls.Add(button4, 2, 4);
-            tableLayoutPanel2.Controls.Add(button5, 3, 4);
-            tableLayoutPanel2.Controls.Add(button6, 2, 5);
-            tableLayoutPanel2.Controls.Add(button7, 3, 5);
             tableLayoutPanel2.Controls.Add(label14, 2, 3);
             tableLayoutPanel2.Controls.Add(textBox7, 3, 3);
             tableLayoutPanel2.Controls.Add(comboBox2, 1, 1);
-            tableLayoutPanel2.Controls.Add(button9, 1, 4);
+            tableLayoutPanel2.Controls.Add(button7, 2, 5);
+            tableLayoutPanel2.Controls.Add(button5, 3, 4);
             tableLayoutPanel2.Dock = DockStyle.Left;
             tableLayoutPanel2.Location = new Point(4, 5);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -438,7 +425,7 @@
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 16.6666679F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 16.6666679F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 16.6666679F));
-            tableLayoutPanel2.Size = new Size(480, 423);
+            tableLayoutPanel2.Size = new Size(480, 428);
             tableLayoutPanel2.TabIndex = 1;
             // 
             // label8
@@ -455,7 +442,7 @@
             // 
             label9.AutoSize = true;
             label9.Dock = DockStyle.Top;
-            label9.Location = new Point(222, 70);
+            label9.Location = new Point(222, 71);
             label9.Name = "label9";
             label9.Size = new Size(94, 50);
             label9.TabIndex = 1;
@@ -465,7 +452,7 @@
             // 
             label10.AutoSize = true;
             label10.Dock = DockStyle.Top;
-            label10.Location = new Point(222, 140);
+            label10.Location = new Point(222, 142);
             label10.Name = "label10";
             label10.Size = new Size(94, 25);
             label10.TabIndex = 2;
@@ -485,7 +472,7 @@
             // 
             label12.AutoSize = true;
             label12.Dock = DockStyle.Top;
-            label12.Location = new Point(3, 70);
+            label12.Location = new Point(3, 71);
             label12.Name = "label12";
             label12.Size = new Size(76, 50);
             label12.TabIndex = 4;
@@ -495,7 +482,7 @@
             // 
             label13.AutoSize = true;
             label13.Dock = DockStyle.Top;
-            label13.Location = new Point(3, 140);
+            label13.Location = new Point(3, 142);
             label13.Name = "label13";
             label13.Size = new Size(76, 50);
             label13.TabIndex = 5;
@@ -518,13 +505,13 @@
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(155, 31);
             dateTimePicker1.TabIndex = 9;
-            dateTimePicker1.Value = new DateTime(2026, 3, 13, 20, 2, 28, 0);
+            dateTimePicker1.Value = new DateTime(2026, 3, 16, 9, 49, 28, 0);
             // 
             // dateTimePicker2
             // 
             dateTimePicker2.Dock = DockStyle.Top;
             dateTimePicker2.Format = DateTimePickerFormat.Short;
-            dateTimePicker2.Location = new Point(322, 73);
+            dateTimePicker2.Location = new Point(322, 74);
             dateTimePicker2.Name = "dateTimePicker2";
             dateTimePicker2.Size = new Size(155, 31);
             dateTimePicker2.TabIndex = 10;
@@ -532,7 +519,7 @@
             // textBox8
             // 
             textBox8.Dock = DockStyle.Top;
-            textBox8.Location = new Point(322, 143);
+            textBox8.Location = new Point(322, 145);
             textBox8.Name = "textBox8";
             textBox8.Size = new Size(155, 31);
             textBox8.TabIndex = 11;
@@ -542,7 +529,7 @@
             comboBox3.Dock = DockStyle.Top;
             comboBox3.FormattingEnabled = true;
             comboBox3.Items.AddRange(new object[] { "101", "102", "103", "201", "202", "203", "301", "302", "303", "401", "402", "403" });
-            comboBox3.Location = new Point(85, 143);
+            comboBox3.Location = new Point(85, 145);
             comboBox3.Name = "comboBox3";
             comboBox3.Size = new Size(131, 33);
             comboBox3.TabIndex = 12;
@@ -550,49 +537,19 @@
             // button4
             // 
             button4.Dock = DockStyle.Fill;
-            button4.Location = new Point(222, 283);
+            button4.Location = new Point(222, 287);
             button4.Name = "button4";
-            button4.Size = new Size(94, 64);
+            button4.Size = new Size(94, 65);
             button4.TabIndex = 13;
             button4.Text = "Tạo mới";
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
-            // button5
-            // 
-            button5.Location = new Point(322, 283);
-            button5.Name = "button5";
-            button5.Size = new Size(94, 63);
-            button5.TabIndex = 14;
-            button5.Text = "Chỉnh sửa";
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
-            // 
-            // button6
-            // 
-            button6.Dock = DockStyle.Fill;
-            button6.Location = new Point(222, 353);
-            button6.Name = "button6";
-            button6.Size = new Size(94, 67);
-            button6.TabIndex = 15;
-            button6.Text = "Xem chi tiết";
-            button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            button7.Location = new Point(322, 353);
-            button7.Name = "button7";
-            button7.Size = new Size(94, 63);
-            button7.TabIndex = 16;
-            button7.Text = "Xóa";
-            button7.UseVisualStyleBackColor = true;
-            button7.Click += button7_Click;
-            // 
             // label14
             // 
             label14.AutoSize = true;
             label14.Dock = DockStyle.Top;
-            label14.Location = new Point(222, 210);
+            label14.Location = new Point(222, 213);
             label14.Name = "label14";
             label14.Size = new Size(94, 50);
             label14.TabIndex = 18;
@@ -601,7 +558,7 @@
             // textBox7
             // 
             textBox7.Dock = DockStyle.Top;
-            textBox7.Location = new Point(322, 213);
+            textBox7.Location = new Point(322, 216);
             textBox7.Name = "textBox7";
             textBox7.Size = new Size(155, 31);
             textBox7.TabIndex = 19;
@@ -610,21 +567,33 @@
             // 
             comboBox2.Dock = DockStyle.Top;
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(85, 73);
+            comboBox2.Location = new Point(85, 74);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(131, 33);
             comboBox2.TabIndex = 21;
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             comboBox2.Leave += comboBox2_Leave;
             // 
-            // button9
+            // button7
             // 
-            button9.Dock = DockStyle.Fill;
-            button9.Location = new Point(85, 283);
-            button9.Name = "button9";
-            button9.Size = new Size(131, 64);
-            button9.TabIndex = 20;
-            button9.Text = "Xuất hợp đồng";
-            button9.UseVisualStyleBackColor = true;
+            button7.Dock = DockStyle.Fill;
+            button7.Location = new Point(222, 358);
+            button7.Name = "button7";
+            button7.Size = new Size(94, 67);
+            button7.TabIndex = 16;
+            button7.Text = "Kết thúc";
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
+            // 
+            // button5
+            // 
+            button5.Location = new Point(322, 287);
+            button5.Name = "button5";
+            button5.Size = new Size(94, 63);
+            button5.TabIndex = 14;
+            button5.Text = "Chỉnh sửa";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // dataGridView2
             // 
@@ -632,20 +601,23 @@
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView2.Dock = DockStyle.Right;
             dataGridView2.Location = new Point(490, 5);
+            dataGridView2.MultiSelect = false;
             dataGridView2.Name = "dataGridView2";
             dataGridView2.ReadOnly = true;
             dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.Size = new Size(639, 423);
+            dataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView2.Size = new Size(639, 428);
             dataGridView2.TabIndex = 0;
+            dataGridView2.CellMouseDoubleClick += dataGridView2_CellMouseDoubleClick;
             // 
             // tabPage4
             // 
             tabPage4.Controls.Add(tableLayoutPanel3);
             tabPage4.Controls.Add(dataGridView3);
-            tabPage4.Location = new Point(4, 34);
+            tabPage4.Location = new Point(4, 29);
             tabPage4.Margin = new Padding(4, 5, 4, 5);
             tabPage4.Name = "tabPage4";
-            tabPage4.Size = new Size(1133, 433);
+            tabPage4.Size = new Size(1133, 438);
             tabPage4.TabIndex = 3;
             tabPage4.Text = "Phòng thuê";
             tabPage4.UseVisualStyleBackColor = true;
@@ -665,7 +637,6 @@
             tableLayoutPanel3.Controls.Add(button10, 0, 3);
             tableLayoutPanel3.Controls.Add(button11, 1, 3);
             tableLayoutPanel3.Controls.Add(button12, 2, 3);
-            tableLayoutPanel3.Controls.Add(button13, 3, 3);
             tableLayoutPanel3.Dock = DockStyle.Left;
             tableLayoutPanel3.Location = new Point(0, 0);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -675,7 +646,7 @@
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 13.1868134F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 13.9717426F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 45.682888F));
-            tableLayoutPanel3.Size = new Size(690, 433);
+            tableLayoutPanel3.Size = new Size(690, 438);
             tableLayoutPanel3.TabIndex = 1;
             // 
             // label18
@@ -700,7 +671,7 @@
             // label21
             // 
             label21.AutoSize = true;
-            label21.Location = new Point(3, 57);
+            label21.Location = new Point(3, 58);
             label21.Name = "label21";
             label21.Size = new Size(89, 25);
             label21.TabIndex = 3;
@@ -710,7 +681,7 @@
             // radioButton3
             // 
             radioButton3.AutoSize = true;
-            radioButton3.Location = new Point(175, 60);
+            radioButton3.Location = new Point(175, 61);
             radioButton3.Name = "radioButton3";
             radioButton3.Size = new Size(116, 29);
             radioButton3.TabIndex = 7;
@@ -722,7 +693,7 @@
             // radioButton4
             // 
             radioButton4.AutoSize = true;
-            radioButton4.Location = new Point(347, 60);
+            radioButton4.Location = new Point(347, 61);
             radioButton4.Name = "radioButton4";
             radioButton4.Size = new Size(78, 29);
             radioButton4.TabIndex = 8;
@@ -732,7 +703,7 @@
             // 
             // button10
             // 
-            button10.Location = new Point(3, 176);
+            button10.Location = new Point(3, 178);
             button10.Name = "button10";
             button10.Size = new Size(123, 54);
             button10.TabIndex = 9;
@@ -742,7 +713,7 @@
             // 
             // button11
             // 
-            button11.Location = new Point(175, 176);
+            button11.Location = new Point(175, 178);
             button11.Name = "button11";
             button11.Size = new Size(123, 54);
             button11.TabIndex = 10;
@@ -752,22 +723,13 @@
             // 
             // button12
             // 
-            button12.Location = new Point(347, 176);
+            button12.Location = new Point(347, 178);
             button12.Name = "button12";
             button12.Size = new Size(123, 54);
             button12.TabIndex = 11;
             button12.Text = "Xóa";
             button12.UseVisualStyleBackColor = true;
             button12.Click += button12_Click;
-            // 
-            // button13
-            // 
-            button13.Location = new Point(519, 176);
-            button13.Name = "button13";
-            button13.Size = new Size(123, 54);
-            button13.TabIndex = 12;
-            button13.Text = "Lịch sử";
-            button13.UseVisualStyleBackColor = true;
             // 
             // dataGridView3
             // 
@@ -778,17 +740,17 @@
             dataGridView3.Name = "dataGridView3";
             dataGridView3.ReadOnly = true;
             dataGridView3.RowHeadersWidth = 51;
-            dataGridView3.Size = new Size(446, 433);
+            dataGridView3.Size = new Size(446, 438);
             dataGridView3.TabIndex = 0;
             // 
             // tabPage5
             // 
             tabPage5.Controls.Add(tableLayoutPanel4);
-            tabPage5.Location = new Point(4, 29);
+            tabPage5.Location = new Point(4, 34);
             tabPage5.Margin = new Padding(4);
             tabPage5.Name = "tabPage5";
             tabPage5.Padding = new Padding(4);
-            tabPage5.Size = new Size(1133, 438);
+            tabPage5.Size = new Size(1133, 433);
             tabPage5.TabIndex = 4;
             tabPage5.Text = "Dịch vụ";
             tabPage5.UseVisualStyleBackColor = true;
@@ -811,9 +773,7 @@
             tableLayoutPanel4.Controls.Add(radioButton6, 2, 4);
             tableLayoutPanel4.Controls.Add(button16, 4, 3);
             tableLayoutPanel4.Controls.Add(button14, 5, 3);
-            tableLayoutPanel4.Controls.Add(button15, 6, 3);
             tableLayoutPanel4.Controls.Add(label27, 3, 2);
-            tableLayoutPanel4.Controls.Add(comboBox5, 4, 2);
             tableLayoutPanel4.Controls.Add(label23, 3, 0);
             tableLayoutPanel4.Controls.Add(label28, 0, 1);
             tableLayoutPanel4.Controls.Add(textBox12, 4, 0);
@@ -823,6 +783,7 @@
             tableLayoutPanel4.Controls.Add(label29, 0, 2);
             tableLayoutPanel4.Controls.Add(comboBox8, 1, 1);
             tableLayoutPanel4.Controls.Add(textBox6, 1, 2);
+            tableLayoutPanel4.Controls.Add(textBox9, 4, 2);
             tableLayoutPanel4.Dock = DockStyle.Fill;
             tableLayoutPanel4.Location = new Point(4, 4);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -832,7 +793,7 @@
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
-            tableLayoutPanel4.Size = new Size(1125, 430);
+            tableLayoutPanel4.Size = new Size(1125, 425);
             tableLayoutPanel4.TabIndex = 0;
             // 
             // label22
@@ -847,7 +808,7 @@
             // label26
             // 
             label26.AutoSize = true;
-            label26.Location = new Point(3, 344);
+            label26.Location = new Point(3, 340);
             label26.Name = "label26";
             label26.Size = new Size(43, 25);
             label26.TabIndex = 6;
@@ -867,7 +828,7 @@
             // textBox14
             // 
             textBox14.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox14.Location = new Point(163, 261);
+            textBox14.Location = new Point(163, 258);
             textBox14.Name = "textBox14";
             textBox14.Size = new Size(154, 31);
             textBox14.TabIndex = 10;
@@ -875,7 +836,7 @@
             // radioButton5
             // 
             radioButton5.AutoSize = true;
-            radioButton5.Location = new Point(163, 347);
+            radioButton5.Location = new Point(163, 343);
             radioButton5.Name = "radioButton5";
             radioButton5.Size = new Size(55, 29);
             radioButton5.TabIndex = 11;
@@ -886,7 +847,7 @@
             // radioButton6
             // 
             radioButton6.AutoSize = true;
-            radioButton6.Location = new Point(323, 347);
+            radioButton6.Location = new Point(323, 343);
             radioButton6.Name = "radioButton6";
             radioButton6.Size = new Size(85, 29);
             radioButton6.TabIndex = 12;
@@ -896,49 +857,32 @@
             // 
             // button16
             // 
-            button16.Location = new Point(643, 261);
+            button16.Location = new Point(643, 258);
             button16.Name = "button16";
             button16.Size = new Size(123, 63);
             button16.TabIndex = 15;
             button16.Text = "Lịch sử";
             button16.UseVisualStyleBackColor = true;
+            button16.Click += button16_Click;
             // 
             // button14
             // 
-            button14.Location = new Point(803, 261);
+            button14.Location = new Point(803, 258);
             button14.Name = "button14";
             button14.Size = new Size(123, 63);
             button14.TabIndex = 0;
             button14.Text = "Lưu ";
             button14.UseVisualStyleBackColor = true;
-            // 
-            // button15
-            // 
-            button15.Location = new Point(963, 261);
-            button15.Name = "button15";
-            button15.Size = new Size(123, 63);
-            button15.TabIndex = 1;
-            button15.Text = "Xuất hóa đơn";
-            button15.UseVisualStyleBackColor = true;
+            button14.Click += button14_Click;
             // 
             // label27
             // 
             label27.AutoSize = true;
-            label27.Location = new Point(483, 172);
+            label27.Location = new Point(483, 170);
             label27.Name = "label27";
             label27.Size = new Size(91, 25);
             label27.TabIndex = 13;
             label27.Text = "Số phòng";
-            // 
-            // comboBox5
-            // 
-            comboBox5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            comboBox5.FormattingEnabled = true;
-            comboBox5.Items.AddRange(new object[] { "101", "102", "103", "201", "202", "203", "301", "302", "303", "401", "402", "403" });
-            comboBox5.Location = new Point(643, 175);
-            comboBox5.Name = "comboBox5";
-            comboBox5.Size = new Size(154, 33);
-            comboBox5.TabIndex = 14;
             // 
             // label23
             // 
@@ -952,7 +896,7 @@
             // label28
             // 
             label28.AutoSize = true;
-            label28.Location = new Point(3, 86);
+            label28.Location = new Point(3, 85);
             label28.Name = "label28";
             label28.Size = new Size(84, 25);
             label28.TabIndex = 16;
@@ -969,7 +913,7 @@
             // label24
             // 
             label24.AutoSize = true;
-            label24.Location = new Point(483, 86);
+            label24.Location = new Point(483, 85);
             label24.Name = "label24";
             label24.Size = new Size(78, 25);
             label24.TabIndex = 4;
@@ -978,7 +922,7 @@
             // textBox13
             // 
             textBox13.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox13.Location = new Point(643, 89);
+            textBox13.Location = new Point(643, 88);
             textBox13.Name = "textBox13";
             textBox13.Size = new Size(154, 31);
             textBox13.TabIndex = 9;
@@ -986,7 +930,7 @@
             // label25
             // 
             label25.AutoSize = true;
-            label25.Location = new Point(3, 258);
+            label25.Location = new Point(3, 255);
             label25.Name = "label25";
             label25.Size = new Size(136, 25);
             label25.TabIndex = 5;
@@ -995,7 +939,7 @@
             // label29
             // 
             label29.AutoSize = true;
-            label29.Location = new Point(3, 172);
+            label29.Location = new Point(3, 170);
             label29.Name = "label29";
             label29.Size = new Size(147, 25);
             label29.TabIndex = 18;
@@ -1004,19 +948,29 @@
             // comboBox8
             // 
             comboBox8.FormattingEnabled = true;
-            comboBox8.Location = new Point(163, 89);
+            comboBox8.Location = new Point(163, 88);
             comboBox8.Name = "comboBox8";
             comboBox8.Size = new Size(151, 33);
             comboBox8.TabIndex = 20;
+            comboBox8.SelectedIndexChanged += comboBox8_SelectedIndexChanged;
             // 
             // textBox6
             // 
             textBox6.Dock = DockStyle.Top;
-            textBox6.Location = new Point(163, 175);
+            textBox6.Location = new Point(163, 173);
             textBox6.Name = "textBox6";
             textBox6.ReadOnly = true;
             textBox6.Size = new Size(154, 31);
             textBox6.TabIndex = 21;
+            // 
+            // textBox9
+            // 
+            textBox9.Dock = DockStyle.Top;
+            textBox9.Location = new Point(643, 173);
+            textBox9.Name = "textBox9";
+            textBox9.ReadOnly = true;
+            textBox9.Size = new Size(154, 31);
+            textBox9.TabIndex = 22;
             // 
             // Form1
             // 
@@ -1026,6 +980,7 @@
             Controls.Add(tabControl1);
             Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(4, 5, 4, 5);
+            MaximizeBox = false;
             Name = "Form1";
             Text = "Quản lý chung cư";
             tabControl1.ResumeLayout(false);
@@ -1051,7 +1006,6 @@
 
         private ContextMenuStrip contextMenuStrip1;
         private TabControl tabControl1;
-        private TabPage tabPage1;
         private TabPage tabPage2;
         private TabPage tabPage3;
         private TabPage tabPage4;
@@ -1089,11 +1043,9 @@
         private ComboBox comboBox3;
         private Button button4;
         private Button button5;
-        private Button button6;
         private Button button7;
         private Label label14;
         private TextBox textBox7;
-        private Button button9;
         private DataGridView dataGridView3;
         private TableLayoutPanel tableLayoutPanel3;
         private Label label18;
@@ -1103,7 +1055,6 @@
         private RadioButton radioButton4;
         private Button button10;
         private Button button11;
-        private Button button13;
         private Button button12;
         private TableLayoutPanel tableLayoutPanel4;
         private Label label22;
@@ -1117,15 +1068,14 @@
         private TextBox textBox14;
         private RadioButton radioButton5;
         private RadioButton radioButton6;
-        private ComboBox comboBox5;
         private Label label27;
         private Button button14;
-        private Button button15;
         private Button button16;
         private Label label28;
         private Label label29;
         private ComboBox comboBox2;
         private ComboBox comboBox8;
         private TextBox textBox6;
+        private TextBox textBox9;
     }
 }

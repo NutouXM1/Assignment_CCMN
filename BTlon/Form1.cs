@@ -218,8 +218,6 @@ namespace BT_lớn
             comboBox3.DisplayMember = "Số phòng";
             comboBox4.DataSource = phongTable;
             comboBox4.DisplayMember = "Số phòng";
-            comboBox5.DataSource = phongTable;
-            comboBox5.DisplayMember = "Số phòng";
         }
 
         private void label21_Click(object sender, EventArgs e)
@@ -246,15 +244,7 @@ namespace BT_lớn
 
         private void comboBox2_Leave(object sender, EventArgs e)
         {
-            var repo = new Nguoithue_repo();
-            var nguoithues = repo.GetNguoithues();
-            foreach (var nguoithue in nguoithues)
-            {
-                if (nguoithue.ID == comboBox2.Text)
-                {
-                    textBox5.Text = nguoithue.hoten;
-                }
-            }
+
         }
 
         private void textBox11_Leave(object sender, EventArgs e)
@@ -274,7 +264,7 @@ namespace BT_lớn
         private void readHopDong()
         {
             DataTable hopdongTable = new DataTable();
-            hopdongTable.Columns.Add("ID");
+            hopdongTable.Columns.Add("Số CCCD");
             hopdongTable.Columns.Add("Họ tên");
             hopdongTable.Columns.Add("Số phòng");
             hopdongTable.Columns.Add("Ngày bắt đầu");
@@ -318,6 +308,121 @@ namespace BT_lớn
             hopdong.tienThue = int.Parse(textBox8.Text);
             repo.UpdateHopdong(hopdong);
             readHopDong();
+        }
+
+        private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            comboBox2.Text = dataGridView2.CurrentRow.Cells[0].Value.ToString();
+            comboBox3.Text = dataGridView2.CurrentRow.Cells[2].Value.ToString();
+            dateTimePicker1.Value = Convert.ToDateTime(dataGridView2.CurrentRow.Cells[3].Value);
+            dateTimePicker2.Value = Convert.ToDateTime(dataGridView2.CurrentRow.Cells[4].Value);
+            textBox8.Text = dataGridView2.CurrentRow.Cells[5].Value.ToString();
+            textBox7.Text = dataGridView2.CurrentRow.Cells[6].Value.ToString();
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            readNguoiThue();
+            readPhong();
+            readID_NguoiThue();
+            readSoPhong_combobox();
+            readHopDong();
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var repo = new Nguoithue_repo();
+            var nguoithues = repo.GetNguoithues();
+            foreach (var nguoithue in nguoithues)
+            {
+                if (nguoithue.ID == comboBox2.Text)
+                {
+                    textBox5.Text = nguoithue.hoten;
+                }
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            textBox1.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            textBox4.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            textBox2.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            textBox3.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            comboBox1.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            if (dataGridView1.CurrentRow.Cells[2].Value.ToString() == "Nam")
+            {
+                radioButton1.Checked = true;
+            }
+            else if (dataGridView1.CurrentRow.Cells[2].Value.ToString() == "Nữ")
+            {
+                radioButton2.Checked = true;
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            models_hoadon hoadon = new models_hoadon();
+            hoadon_repo repo = new hoadon_repo();
+            hoadon.ID = comboBox8.Text;
+            hoadon.hoTen = textBox11.Text;
+            hoadon.soPhong = textBox9.Text;
+            hoadon.soDien = int.Parse(textBox12.Text);
+            hoadon.soNuoc = int.Parse(textBox13.Text);
+            hoadon.soPhuongTien = int.Parse(textBox14.Text);
+            hoadon.ngayTao = DateTime.Now;
+            if (radioButton5.Checked)
+            {
+                hoadon.tongTien = hoadon.soDien * 2500 + hoadon.soNuoc * 1500 + hoadon.soPhuongTien * 50000 + 250000;
+            }
+            else if (radioButton6.Checked)
+            {
+                hoadon.tongTien = hoadon.soDien * 2500 + hoadon.soNuoc * 1500 + hoadon.soPhuongTien * 50000;
+            }
+            repo.AddHoadon(hoadon);
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            Form2 form = new Form2();
+            form.Show();
+        }
+
+        private void comboBox8_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var repo = new Nguoithue_repo();
+            var repo2 = new hopdong_repo();
+            var nguoithues = repo.GetNguoithues();
+            var hopdongs = repo2.GetHopdongs();
+            foreach (var nguoithue in nguoithues)
+            {
+                if (nguoithue.ID == comboBox8.Text)
+                {
+                    textBox11.Text = nguoithue.hoten;
+                    textBox6.Text = nguoithue.phuongtien;
+                }
+            }
+            foreach (var hopdong in hopdongs)
+            {
+                if (hopdong.ID == comboBox8.Text)
+                {
+                    textBox9.Text = hopdong.soPhong;
+                }
+            }
         }
     }
 }

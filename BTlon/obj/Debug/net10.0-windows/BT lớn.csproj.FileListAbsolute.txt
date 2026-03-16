@@ -57,3 +57,4 @@ C:\Users\Admins\Documents\C#\BT lớn\bin\Debug\net10.0-windows\runtimes\win-x64
 C:\Users\Admins\Documents\C#\BT lớn\bin\Debug\net10.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\Admins\Documents\C#\BT lớn\obj\Debug\net10.0-windows\BT lớn.csproj.AssemblyReference.cache
 C:\Users\Admins\Documents\C#\BT lớn\obj\Debug\net10.0-windows\BT lớn.csproj.Up2Date
+C:\Users\Admins\Documents\C#\BT lớn\obj\Debug\net10.0-windows\BT_lớn.Form2.resources
